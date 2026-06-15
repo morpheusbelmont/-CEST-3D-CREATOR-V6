@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta 
+name="viewport" 
+content="width=device-width, initial-scale=1.0">
+
+
+<title>
+CEST 3D CREATOR V6
+</title>
+
+
+
+<link 
+rel="stylesheet" 
+href="css/style.css">
+
+
+<link 
+rel="stylesheet" 
+href="css/loader.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- ==========================
+        PRELOAD CEST
+=========================== -->
+
+
+
+<section id="loader">
+
+
+
+<div class="cubo-loader">
+
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+</div>
+
+
+
+
+<h1>
+CEST 3D CREATOR
+</h1>
+
+
+
+<h3>
+Cargando Sistema CEST...
+</h3>
+
+
+
+<div class="barra">
+
+<span id="progreso"></span>
+
+</div>
+
+
+
+<p id="estado">
+
+Inicializando Motor 3D...
+
+</p>
+
+
+
+<div class="firma">
+
+
+Tecnología creada por:
+
+<br>
+
+
+<b>
+
+Lic. Carlos Eduardo Sepúlveda Toro
+
+</b>
+
+
+<br>
+
+
+Licenciado en Comunicación e Informática Educativa
+
+<br>
+
+
+Diseñador Gráfico y Desarrollador Multimedia
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ==========================
+          APLICACIÓN
+=========================== -->
+
+
+
+<main id="app">
+
+
+
+
+
+<!-- MENÚ PRINCIPAL -->
+
+
+
+<section id="panel">
+
+
+
+<h2>
+
+CEST STUDIO
+
+</h2>
+
+
+
+
+
+<label>
+
+Objeto
+
+</label>
+
+
+
+
+<select id="figura">
+
+
+<option value="cubo">
+Cubo
+</option>
+
+
+<option value="esfera">
+Esfera
+</option>
+
+
+<option value="piramide">
+Pirámide
+</option>
+
+
+<option value="prisma">
+Prisma
+</option>
+
+
+<option value="vaso">
+Vaso
+</option>
+
+
+<option value="casa">
+Casa
+</option>
+
+
+<option value="estrella">
+Estrella
+</option>
+
+
+<option value="esfinge">
+Cabeza Esfinge
+</option>
+
+
+
+</select>
+
+
+
+
+
+<button onclick="crearSeleccion()">
+
+Crear objeto
+
+</button>
+
+
+
+
+
+<hr>
+
+
+
+
+<button onclick="modo('translate')">
+
+🖐 Mover
+
+</button>
+
+
+
+
+<button onclick="modo('rotate')">
+
+🔄 Rotar
+
+</button>
+
+
+
+
+<button onclick="modo('scale')">
+
+📏 Escalar
+
+</button>
+
+
+
+
+
+<hr>
+
+
+
+
+<label>
+
+Color
+
+</label>
+
+
+
+<input 
+type="color" 
+id="color"
+value="#00ffff">
+
+
+
+
+
+<label>
+
+Escala
+
+</label>
+
+
+
+<input 
+
+id="escala"
+
+type="range"
+
+min=".5"
+
+max="5"
+
+step=".1"
+
+value="1">
+
+
+
+
+
+
+
+<button onclick="capturarPNG()">
+
+📸 Captura PNG
+
+</button>
+
+
+
+
+
+<button onclick="guardarProyecto()">
+
+💾 Guardar
+
+</button>
+
+
+
+
+
+<button onclick="iniciarReto()">
+
+🎮 Reto
+
+</button>
+
+
+
+
+
+
+<div id="medidas"></div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CRÉDITOS -->
+
+
+<footer>
+
+
+
+Desarrollado por:
+
+
+<b>
+
+Lic. Carlos Eduardo Sepúlveda Toro
+
+</b>
+
+
+
+<br>
+
+
+CEST - Creative Educational System Technology
+
+
+
+</footer>
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+<!-- LIBRERÍAS -->
+
+
+<script src="
+https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
+</script>
+
+
+<script src="
+https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js">
+</script>
+
+
+<script src="
+https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/TransformControls.js">
+</script>
+
+
+
+
+
+<!-- SISTEMA -->
+
+<script src="js/preload.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="js/objetos.js"></script>
+
+<script src="js/materiales.js"></script>
+
+<script src="js/controles.js"></script>
+
+<script src="js/medidas.js"></script>
+
+<script src="js/guardar.js"></script>
+
+<script src="js/captura.js"></script>
+
+<script src="js/retos.js"></script>
+
+
+
+
+
+</body>
+
+</html>
