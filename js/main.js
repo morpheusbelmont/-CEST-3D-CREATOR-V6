@@ -101,31 +101,23 @@ preserveDrawingBuffer:true
 
 });
 
-
-
+// AÑADIR CANVAS CEST
 
 renderer.setSize(
-
-innerWidth,
-
-innerHeight
-
+window.innerWidth,
+window.innerHeight
 );
 
 
+renderer.shadowMap.enabled = true;
 
-renderer.shadowMap.enabled=true;
 
+renderer.domElement.id = "canvas3D";
 
 
 document.body.appendChild(
-
 renderer.domElement
-
 );
-
-
-
 
 
 
