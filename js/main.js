@@ -364,7 +364,7 @@ orbit.update();
 
 
 
-actualizarMedidas();
+if(typeof actualizarMedidas === "function"){  actualizarMedidas();  }
 
 
 
