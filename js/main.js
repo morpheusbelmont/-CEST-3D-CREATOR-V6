@@ -139,7 +139,6 @@ crearControles();
 crearGrid();
 
 
-
 crearObjeto("cubo");
 
 animar();
