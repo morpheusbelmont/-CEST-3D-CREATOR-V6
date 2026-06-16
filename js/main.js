@@ -140,7 +140,7 @@ crearGrid();
 
 
 
-
+crearObjeto("cubo");
 
 animar();
 
